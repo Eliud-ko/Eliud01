@@ -85,7 +85,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 		const hari = moment.tz('Asia/Jakarta').locale('id').format('dddd');
 		const tanggal = moment.tz('Asia/Jakarta').locale('id').format('DD/MM/YYYY');
 		const jam = moment.tz('Asia/Jakarta').locale('id').format('HH:mm:ss');
-		const ucapanWaktu = jam < '05:00:00' ? 'Selamat Pagi 🌉' : jam < '11:00:00' ? 'Selamat Pagi 🌄' : jam < '15:00:00' ? 'Selamat Siang 🏙' : jam < '18:00:00' ? 'Selamat Sore 🌅' : jam < '19:00:00' ? 'Selamat Sore 🌃' : jam < '23:59:00' ? 'Selamat Malam 🌌' : 'Selamat Malam 🌌';
+		const ucapanWaktu = jam < '05:00:00' ? ' ELIUD_BOT_V1' : jam < '11:00:00' ? '🌄ELIUD_BOT_V1' : jam < '15:00:00' ? '🏙ELIUD_BOT_V1' : jam < '18:00:00' ? ' 🌅ELIUD_BOT_V1' : jam < '19:00:00' ? ' 🌃ELIUD_BOT_V1' : jam < '23:59:00' ? '🌌ELIUD_BOT_V1';
 		const almost = 0.72
 		const time = Date.now()
 		const time_now = new Date()
@@ -174,7 +174,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 		// Auto Set Bio
 		if (set.autobio) {
 			if (new Date() * 1 - set.status > 60000) {
-				await naze.updateProfileStatus(`${naze.user.name} | 🎯 Runtime : ${runtime(process.uptime())}`).catch(e => {})
+				await naze.updateProfileStatus(`${naze.user.name} | 🇰🇪Hello Kenya 🇰🇪 ELIUD_BOT_V1🎯 Runtime : ${runtime(process.uptime())}`).catch(e => {})
 				set.status = new Date() * 1
 			}
 		}
@@ -3315,8 +3315,8 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 					profile = fake.anonim
 				}
 				const menunya = `
-╭──❍「 *USER INFO* 」❍
-├ *Nama* : ${m.pushName ? m.pushName : 'Tanpa Nama'}
+╭──❍「 *ELIUD_BOT_V1* 」❍
+├ *Nama* : ${m.pushName ? m.pushName : 'Hello 🇰🇪'}
 ├ *Id* : @${m.sender.split('@')[0]}
 ├ *User* : ${isVip ? 'VIP' : isPremium ? 'PREMIUM' : 'FREE'}
 ├ *Limit* : ${isVip ? 'VIP' : db.users[m.sender].limit }
@@ -3329,7 +3329,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 ├ *Mode* : ${naze.public ? 'Public' : 'Self'}
 ├ *Prefix* :${set.multiprefix ? '「 MULTI-PREFIX 」' : ' *'+prefix+'*' }
 ├ *Premium Feature* : 🔸️
-╰─┬────❍
+╰─┬───ELIUD_BOT_V1─❍
 ╭─┴─❍「 *ABOUT* 」❍
 ├ *Tanggal* : ${tanggal}
 ├ *Hari* : ${hari}
@@ -3363,7 +3363,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 │${setv} ${prefix}stopjadibot
 │${setv} ${prefix}listjadibot
 │${setv} ${prefix}donasi
-╰─┬────❍
+╰─┬─ELIUD_BOT_V1───❍
 ╭─┴❍「 *GROUP* 」❍
 │${setv} ${prefix}add (62xxx)
 │${setv} ${prefix}kick (@tag/62xxx)
@@ -3384,7 +3384,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 │${setv} ${prefix}listonline
 │${setv} ${prefix}group set
 │${setv} ${prefix}group (khusus admin)
-╰─┬────❍
+╰─┬─ELIUD_BOT_V1───❍
 ╭─┴❍「 *SEARCH* 」❍
 │${setv} ${prefix}ytsearch (query)
 │${setv} ${prefix}spotify (query)
@@ -3418,7 +3418,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 │${setv} ${prefix}dare
 │${setv} ${prefix}bucin
 │${setv} ${prefix}renungan
-╰─┬────❍
+╰─┬──ELIUD_BOT_V1──❍
 ╭─┴❍「 *TOOLS* 」❍
 │${setv} ${prefix}get (url) 🔸️
 │${setv} ${prefix}hd (reply pesan)
@@ -3461,7 +3461,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 │${setv} ${prefix}earrape (reply audio)
 │${setv} ${prefix}nightcore (reply audio)
 │${setv} ${prefix}getexif (reply sticker)
-╰─┬────❍
+╰─┬──ELIUD_BOT_V1──❍
 ╭─┴❍「 *AI* 」❍
 │${setv} ${prefix}ai (query)
 │${setv} ${prefix}simi (query)
@@ -3494,7 +3494,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 │${setv} ${prefix}tebaknegara
 │${setv} ${prefix}tebakgambar
 │${setv} ${prefix}tebakbendera
-╰─┬────❍
+╰─┬──ELIUD_BOT_V1──❍
 ╭─┴❍「 *FUN* 」❍
 │${setv} ${prefix}coba
 │${setv} ${prefix}dadu
@@ -3560,7 +3560,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 │${setv} $
 │${setv} >
 │${setv} <
-╰──────❍`
+╰───ELIUD_BOT_V1───❍`
 				await m.reply({
 					document: fake.docs,
 					fileName: ucapanWaktu,
@@ -3594,7 +3594,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 			break
 			case 'botmenu': {
 				m.reply(`
-╭──❍「 *BOT* 」❍
+╭──❍「 *ELIUD_BOT_V1* 」❍
 │${setv} ${prefix}profile
 │${setv} ${prefix}claim
 │${setv} ${prefix}buy [item] (nominal)
@@ -3622,7 +3622,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 │${setv} ${prefix}stopjadibot
 │${setv} ${prefix}listjadibot
 │${setv} ${prefix}donasi
-╰──────❍`)
+╰─────ELIUD_BOT_V1─❍`)
 			}
 			break
 			case 'groupmenu': {
@@ -3647,7 +3647,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 │${setv} ${prefix}listonline
 │${setv} ${prefix}group set
 │${setv} ${prefix}group (khusus admin)
-╰──────❍`)
+╰────ELIUD_BOT_V1──❍`)
 			}
 			break
 			case 'searchmenu': {
@@ -3666,7 +3666,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 │${setv} ${prefix}cuaca (kota)
 │${setv} ${prefix}tenor (query)
 │${setv} ${prefix}urban (query)
-╰──────❍`)
+╰───ELIUD_BOT_V1───❍`)
 			}
 			break
 			case 'downloadmenu': {
@@ -3680,7 +3680,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 │${setv} ${prefix}facebook (url)
 │${setv} ${prefix}spotifydl (url)
 │${setv} ${prefix}mediafire (url)
-╰──────❍`)
+╰────ELIUD_BOT_V1──❍`)
 			}
 			break
 			case 'quotesmenu': {
@@ -3693,7 +3693,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 │${setv} ${prefix}dare
 │${setv} ${prefix}bucin
 │${setv} ${prefix}renungan
-╰──────❍`)
+╰──ELIUD_BOT_V1────❍`)
 			}
 			break
 			case 'toolsmenu': {
@@ -3740,7 +3740,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 │${setv} ${prefix}earrape (reply audio)
 │${setv} ${prefix}nightcore (reply audio)
 │${setv} ${prefix}getexif (reply sticker)
-╰──────❍`)
+╰───ELIUD_BOT_V1───❍`)
 			}
 			break
 			case 'aimenu': {
@@ -3750,14 +3750,14 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 │${setv} ${prefix}simi (query)
 │${setv} ${prefix}gemini (query)
 │${setv} ${prefix}txt2img (query)
-╰──────❍`)
+╰──ELIUD_BOT_V1────❍`)
 			}
 			break
 			case 'randommenu': {
 				m.reply(`
 ╭──❍「 *RANDOM* 」❍
 │${setv} ${prefix}coffe
-╰──────❍`)
+╰───ELIUD_BOT_V1───❍`)
 			}
 			break
 			case 'stalkermenu': {
@@ -3769,7 +3769,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 │${setv} ${prefix}tiktokstalk
 │${setv} ${prefix}githubstalk
 │${setv} ${prefix}genshinstalk
-╰──────❍`)
+╰────ELIUD_BOT_V1──❍`)
 			}
 			break
 			case 'animemenu': {
@@ -3777,7 +3777,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 ╭──❍「 *ANIME* 」❍
 │${setv} ${prefix}waifu
 │${setv} ${prefix}neko
-╰──────❍`)
+╰────ELIUD_BOT_V1──❍`)
 			}
 			break
 			case 'gamemenu': {
@@ -3804,7 +3804,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 │${setv} ${prefix}tebaknegara
 │${setv} ${prefix}tebakgambar
 │${setv} ${prefix}tebakbendera
-╰──────❍`)
+╰────ELIUD_BOT_V1──❍`)
 			}
 			break
 			case 'funmenu': {
@@ -3829,7 +3829,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 │${setv} ${prefix}huluh (text)
 │${setv} ${prefix}heleh (text)
 │${setv} ${prefix}holoh (text)
-╰──────❍`)
+╰────ELIUD_BOT_V1──❍`)
 			}
 			break
 			case 'ownermenu': {
@@ -3867,7 +3867,7 @@ module.exports = naze = async (naze, m, msg, store, groupCache) => {
 │${setv} $
 │${setv} >
 │${setv} <
-╰──────❍`)
+╰───ELIUD_BOT_V1───❍`)
 			}
 			break
 
