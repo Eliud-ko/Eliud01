@@ -24,13 +24,13 @@ async function GroupUpdate(naze, m, store) {
 	if (global.db?.groups[m.chat]?.setinfo && naze.public) {
 		const admin = `@${m.sender.split`@`[0]}`
 		const messages = {
-			1: 'mereset link grup!',
+			1: 'reset link of grup!',
 			21: `mengubah Subject Grup menjadi :\n*${m.messageStubParameters[0]}*`,
-			22: 'telah mengubah icon grup.',
-			23: 'mereset link grup!',
-			24: `mengubah deskripsi grup.\n\n${m.messageStubParameters[0]}`,
-			25: `telah mengatur agar *${m.messageStubParameters[0] == 'on' ? 'hanya admin' : 'semua peserta'}* yang dapat mengedit info grup.`,
-			26: `telah *${m.messageStubParameters[0] == 'on' ? 'menutup' : 'membuka'}* grup!\nSekarang ${m.messageStubParameters[0] == 'on' ? 'hanya admin yang' : 'semua peserta'} dapat mengirim pesan.`,
+			22: 'icon of grup.',
+			23: 'link of grup!',
+			24: `description of grup.\n\n${m.messageStubParameters[0]}`,
+			25: ` mengatur agar *${m.messageStubParameters[0] == 'on' ? 'hanya admin' : 'semua peserta'}* yang dapat mengedit info grup.`,
+			26: `group mute *${m.messageStubParameters[0] == 'on' ? 'menutup' : 'membuka'}* grup!\nSekarang ${m.messageStubParameters[0] == 'on' ? 'hanya admin yang' : 'semua peserta'} dapat mengirim pesan.`,
 			29: `telah menjadikan @${m.messageStubParameters[0].split`@`[0]} sebagai admin.`,
 			30: `telah memberhentikan @${m.messageStubParameters[0].split`@`[0]} dari admin.`,
 			72: `mengubah durasi pesan sementara menjadi *@${m.messageStubParameters[0]}*`,
@@ -82,7 +82,7 @@ async function GroupParticipantsUpdate(naze, { id, participants, author, action 
 				try {
 					profile = await naze.profilePictureUrl(n, 'image');
 				} catch {
-					profile = 'https://telegra.ph/file/95670d63378f7f4210f03.png';
+					profile = 'https://files.catbox.moe/cbv0wd.jpg';
 				}
 				let messageText;
 				if (action === 'add') {
@@ -144,7 +144,7 @@ async function LoadDataBase(naze, m) {
 			anticall: true,
 			original: true,
 			readsw: false,
-			autobio: false,
+			autobio: true,
 			autoread: true,
 			antispam: false,
 			autotyping: true,
