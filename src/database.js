@@ -11,7 +11,7 @@ if (/mongo/.test(global.tempatDB)) {
 			this.url = url
 			this._model = null
 			this.options = options
-			this.isConnecting = false
+			this.isConnecting =true
 			this.isReconnecting = false
 			
 			mongoose.connection.on('disconnected', async () => {
